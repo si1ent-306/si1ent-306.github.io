@@ -59,7 +59,7 @@ window.onload = function () {
             const options = {method: 'GET'};
 
             //Get games
-            fetch(`http://site.api.espn.com/apis/site/v2/sports/${leagueName}/scoreboard`, options)
+            fetch(`https://site.api.espn.com/apis/site/v2/sports/${leagueName}/scoreboard`, options)
                 .then(response =>
                     response.json())
                 .then(response => {
