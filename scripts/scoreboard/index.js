@@ -1,7 +1,6 @@
 window.onload = function () {
     let sport = document.getElementById("sport");
     let gameList = document.getElementById("games-list");
-    let signupBtn = document.getElementById("sign-in");
     let sportsList = document.getElementById("nav-list");
     let newsList = document.getElementById("news-list");
     let standingsList = document.getElementById("standings-list");
@@ -18,8 +17,14 @@ window.onload = function () {
     let today = document.getElementById('date');
     today.innerHTML = year + '-' + month + '-' + day;
     const listItems = document.querySelectorAll("li");
-    const gameslis = document.getElementsByClassName("game-li");
-
+    gameList.forEach( game => {
+        console.log("Clicked game with ID:", game.dataset.gameId);
+        console.log("Clicked element:", this);
+        }
+    )
+    document.getElementById('back-to-projects').addEventListener('click', () => {
+        location.href = 'https://si1ent-306.github.io/programming/personal-projects.html'
+    })
     // Map sports to leagues
     const sportToLeagueMap = {
         NFL: "football/nfl",
