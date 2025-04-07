@@ -1,0 +1,219 @@
+/* Global styles */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    transition: background-color 0.3s, color 0.3s;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+/* Navigation styles */
+
+#itNav {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 90px #0000ff;
+    width: auto;
+}
+
+/* Navigation list styles */
+#itNav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+/* Navigation link styles */
+#itNav a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 5px;
+    display: inline-block;
+    --neon: rgba(0, 0, 255, 0.75);
+}
+#itNav h1 a{
+    font-size: 50px;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-shadow: 0 0 30px rgba(0, 0, 255, 0.75);
+    margin: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+#itNav a:hover {
+    background: var(--neon);
+    box-shadow: 0 0 5px var(--neon), 0 0 25px var(--neon), 0 0 50px var(--neon), 0 0 100px var(--neon);
+    outline-color: transparent;
+    transition: 0.4s linear 0s;
+    text-decoration: none;
+    border-radius: 15px;
+}
+/* Header styles */
+h1 {
+    font-size: 50px;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-shadow: 0 0 30px #0000ff;
+    margin: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+h3{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-shadow: 0 0 30px #0000ff;
+    text-decoration: underline solid white;
+}
+/* Article styles */
+article {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 20px;
+    text-align: center;
+    font-size: 25px;
+    height: calc(100vh - 40px); /* Adjusts to fit within the viewport */
+    overflow: auto; /* Enables scrolling only if content overflows */
+}
+p{
+    /* Set the font size to 25px */
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* Set the grid column start to 2 and the grid row start to 1 */
+    grid-column-start: 2;
+    grid-row-start: 1;
+    /* Add margin and center the text */
+    margin: 20px;
+    text-align: center;
+}
+
+/* Navigation styles */
+nav{
+    /* Set the height to 100vh and hide the overflow */
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    /* Set the display to flex and flex direction to column */
+    display: flex;
+    text-decoration: none;
+    /* Set the grid column start to 1 and the grid column end to 3 */
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+/* Navigation list item and link styles */
+nav li, nav a {
+    /* Set the display to block and add margin and padding */
+    display: block;
+    margin: 10px 0;
+    padding: 10px 0;
+    text-decoration: none;
+    /* Remove the list style type and add a text shadow */
+    list-style-type: none;
+    list-style-image: none;
+    color: white;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: white 0px 0px 5px;
+    /* Add a cursor pointer */
+    cursor: pointer;
+}
+.contentDiv ul li.with-dot {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding: 10px;
+    font-size: 25px;
+}
+/*List styles*/
+.contentDiv ul li{
+    font-size: 25px;
+    list-style-type: none;
+    padding: 7px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.contentDiv ul li.smallerLI{
+    font-size: 20px;
+    list-style-type: none;
+    padding: 7px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+div#centreDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p#centerP {
+    text-align: center;
+    line-height: 100px;
+}
+
+/* Light mode styles */
+.light {
+    /* Set the background color to white and the text color to black */
+    background-color: white;
+    color: black;
+    /* Set the header text color to black and add a text shadow */
+    h1{
+        color: black;
+        font-size: 50px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-shadow: #0000ff 0px 0px 30px;
+    }
+    /* Set the navigation list item and link styles */
+    nav li, nav a {
+        color: black;
+        display: block;
+        margin: 10px 0;
+        padding: 10px 0;
+        text-decoration: none;
+        list-style-type: none;
+        list-style-image: none;
+        font-size: 25px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-shadow: black 0px 0px 2px;
+    }
+}
+
+/* Light mode navigation styles */
+.light #itNav a {
+    color: #000;
+}
+
+.light #itNav li {
+    color: #000;
+}
+
+/* Switch button styles */
+#switchbtn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    font-size: 35px;
+    width: 50px;
+    height: 50px;
+}

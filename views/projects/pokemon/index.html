@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/scripts/pokemon/index.js"></script>
+  <link href="/css/pokemon/styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Fetch Pokemon Data</title>
+</head>
+<body>
+
+<label for="pokemonName">Pokemon Search</label>
+<form onsubmit="fetchData(event)">
+<input id="pokemonName" placeholder="Enter Pokemon Name" type="text"/>
+</form>
+<h1 id="couldntfind" style="display: none">Couldn't find a Pokemon with that name. Try checking the spelling and search again.</h1>
+  <button onclick="fetchData(event)">Fetch Pokemon</button>
+  <div id="pokemonCard" style="display: none">
+    <p id="pokemonDisplayName" style="display: none"></p>
+    <p id="pokemonID" style="display: none"></p>
+    <img src="" id="pokemonImage" alt="Pokemon Image" style="display: none;"/>
+    <ul id="pokemonTypes"></ul>
+    <p id="pokemonHeight"></p>
+    <p id="pokemonWeight"></p>
+    <ul id="pokemonAbilities"></ul>
+  </div>
+</body>
+</html>

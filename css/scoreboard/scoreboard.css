@@ -1,0 +1,116 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+h1#sport{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: white 0px 0px 5px;
+}
+h2#date{
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: white 0px 0px 5px;
+}
+
+
+#nav-bar {
+    position: fixed;  /* Keeps it at the top even when scrolling */
+    margin-bottom: 40px;
+    top: 0;
+    left: 0;
+    width: 100%;  /* Stretches across the full width */
+    background-color: black; /* Set background color */
+    box-shadow: 0 0 90px #00ff00; /* Adjust shadow */
+    display: flex;
+    justify-content: center; /* Centers the nav items */
+    padding: 15px 0;
+    z-index: 1000; /* Ensures it's above other content */
+}
+
+/* Navigation list styles */
+#nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    --neon: rgba(0, 255, 0, 0.75);
+}
+#nav-bar ul li, #games-list li{
+    cursor: pointer;
+    text-decoration: underline 0.15em rgba(255, 255, 255, 0);
+    transition: text-decoration-color 300ms;
+}
+#nav-bar ul li:hover, #games-list li:hover{
+    --neon: rgba(0, 255, 0, 0.45);
+    text-decoration: underline;
+    transition: 0.4s linear 0s;
+    background: var(--neon);
+    box-shadow: 0 0 5px var(--neon), 0 0 25px var(--neon), 0 0 50px var(--neon), 0 0 100px var(--neon);
+    outline-color: transparent;
+    border-radius: 15px;
+}
+
+
+
+#games-list, #stats-list, #news-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    gap: 20px;
+}
+
+#games-list li, #stats-list li, #news-list li{
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+    gap: 20px;
+}
+#games-list{
+    text-align: center;
+}
+/* Game page styles */
+
+/* Switch button styles */
+#switchbtn {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    font-size: 35px;
+    width: 50px;
+    height: 50px;
+}

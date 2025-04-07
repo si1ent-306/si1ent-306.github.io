@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elliott Wagner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Elliott Wagner (and AI)" />
+    <meta name="description" content="Elliott Wagner's website that shows off his IT and Announcing side.">
+    <link rel="icon" href="/images/icon.png">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/dcc0625c67.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="mainHeadingDiv">
+<h1>What side of Elliott do you want to see?</h1>
+</div>
+<div id="btnDiv">
+    <a href="/programming">
+        <button id="itBtn" class="btn-76" >Programmer</button>
+    </a>
+    <a href="/announcing">
+        <button id="announcerBtn" class="btn-76">Announcer</button>
+    </a>
+</div>
+<i class="fa-sharp-duotone fa-solid fa-circle-half-stroke" onclick="myFunction()" id="switchbtn"></i>
+<script>
+    function myFunction() {
+        let element = document.body;
+        element.classList.toggle("light");
+    }
+
+</script>
+</body>
+</html>

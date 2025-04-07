@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+div#pokemonCard{
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: x-large;
+    display: flex;
+    padding: 15px;
+    border: 3px solid white;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 0 auto;
+    box-sizing: border-box;
+    max-width: 300px;
+    box-shadow: white 0px 0px 15px;
+}
+label {
+    font-size: xx-large;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: white 0px 0px 5px;
+}
+
+input[type="text"] {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    caret-color: blue;
+    caret-shape: underscore;
+    background-color: #ffde00;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+input[type="text"]:focus{
+    background-color: #b3a125;
+}
+button {
+    padding: 0.75rem 1rem;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+button:hover { /* Add hover effect for the button */
+    background-color: #cc0000; /* Darker green on hover */
+}
+
+.pokemon-info { /* Create a container for fetched information */
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    margin-top: 2rem;
+}
+
+.pokemon-info img { /* Style the image of the Pokémon */
+    width: 600px;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.pokemon-info p { /* Style the paragraphs for info */
+    margin: 0.2rem 0;
+}
+#pokemonDisplayName{
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#pokemonTypes { /* Style the list of Pokémon types */
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+#pokemonTypes li {
+    color: black;
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    font-size: 0.8rem;
+}
+#pokemonTypes li.fire {
+    background-color: #EE8130; /* Fire type */
+}
+#pokemonTypes li.water {
+    background-color: #6390F0; /* Water type */
+}
+#pokemonTypes li.grass {
+    background-color: #7AC74C; /* Grass type */
+}
+#pokemonTypes li.normal{
+    background-color: #A8A77A;
+}
+#pokemonTypes li.poison {
+    background-color: #A33EA1; /* Fire type */
+}
+#pokemonTypes li.electric {
+    background-color: #F7D02C; /* Water type */
+}
+#pokemonTypes li.ice {
+    background-color: #96D9D6; /* Grass type */
+}
+#pokemonTypes li.fighting{
+    background-color: #C22E28;
+}
+#pokemonTypes li.ground {
+    background-color: #E2BF65; /* Fire type */
+}
+#pokemonTypes li.flying {
+    background-color: #A98FF3; /* Water type */
+}
+#pokemonTypes li.psychic {
+    background-color: #F95587; /* Grass type */
+}
+#pokemonTypes li.bug{
+    background-color: #A6B91A;
+}
+#pokemonTypes li.rock {
+    background-color: #B6A136; /* Fire type */
+}
+#pokemonTypes li.ghost {
+    background-color: #735797; /* Water type */
+}
+#pokemonTypes li.dark {
+    background-color: #705746; /* Grass type */
+}
+#pokemonTypes li.dragon{
+    background-color: #6F35FC;
+}
+#pokemonTypes li.steel {
+    background-color: #B7B7CE; /* Grass type */
+}
+#pokemonTypes li.fairy{
+    background-color: #D685AD;
+}
+#pokemonAbilities { /* Style the list of Pokémon types */
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+}
+#pokemonAbilities li { /* Style individual type list items */
+    color: black;
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background-color: #f1f1f1; /* Light gray background */
+    font-size: 0.8rem; /* Smaller font size */
+}

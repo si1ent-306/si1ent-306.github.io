@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scoreboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Elliott Wagner" />
+    <script src="/scripts/scoreboard/index.js"></script>
+    <meta name="description" content="Elliott Wagner's website that shows off his IT and Announcing side.">
+    <link rel="icon" href="/images/icon.png">
+    <link rel="stylesheet" type="text/css" href="/css/scoreboard/scoreboard.css">
+    <script src="https://kit.fontawesome.com/dcc0625c67.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav id="nav-bar">
+    <ul id="nav-list">
+        <li id="EPL">EPL</li>
+        <li id="laliga">LaLiga</li>
+        <li id="bundesliga">Bundesliga</li>
+        <li id="Serie A">Serie A</li>
+        <li id="basketball">Basketball</li>
+        <li id="NFL">NFL</li>
+        <li id="baseball">Baseball</li>
+        <li id="hockey">Hockey</li>
+    </ul>
+</nav>
+<div id="scores">
+    <h1 id="sport">Scoreboard</h1>
+    <h2 id="date">Date Goes Here</h2>
+    <ul id="games-list">
+
+    </ul>
+    <ul id="stats-list">
+
+    </ul>
+    <ul id="news-list">
+
+    </ul>
+</div>
+<i class="fa-sharp-duotone fa-solid fa-circle-half-stroke" onclick="myFunction()" id="switchbtn"></i>
+<script>
+    function myFunction() {
+        let element = document.body;
+        element.classList.toggle("light");
+    }
+</script>
+</body>
+</html>

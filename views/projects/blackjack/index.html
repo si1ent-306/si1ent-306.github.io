@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/scripts/blackjack/index.js"></script>
+    <link href="/css/blackjack/style.css" rel="stylesheet">
+    <title>Blackjack</title>
+</head>
+<body>
+<div id="content">
+<h1>Blackjack</h1>
+<h2 id="textHeading"></h2>
+<h3 id="player-wins"></h3>
+<h3 id="dealer-wins"></h3>
+<button id="start-button" onclick="startGame()">Start Game</button>
+<button id="reset-button" onclick="resetGame()">Reset</button>
+<div id="dealer">
+    <h2>Dealer</h2>
+    <div id="dealer-hand"></div>
+    <div id="dealer-points"></div>
+</div>
+<div id="player">
+    <h2>Player</h2>
+    <div id="player-hand"></div>
+    <div id="player-points"></div>
+</div>
+<button id="hit-button" onclick="hit()" style="display: none">Hit</button>
+<button id="stand-button" onclick="stand()" style="display: none">Stand</button>
+<img id="card">
+<button id="play-again-button" onclick="resetGame()" style="display: none">Play Again?</button>
+<h3 id="player-cash"></h3>
+</div>
+</body>
+</html>

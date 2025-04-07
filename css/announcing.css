@@ -1,0 +1,188 @@
+/* Global styles */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+html, body {
+    height: 100%;
+    overflow: hidden; /* Prevents unnecessary scrolling */
+}
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    transition: background-color 0.3s, color 0.3s;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+/* Navigation styles */
+#announcingNav {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 90px #ff0000;
+    width: auto;
+    height: 100vh;
+
+}
+
+/* Navigation list styles */
+#announcingNav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 0;
+    height: 100%;
+    max-height: calc(100vh - 40px); /* Adjust for padding */
+    overflow-y: auto; /* Allows scrolling only inside the nav */
+
+}
+
+/* Navigation link styles */
+#announcingNav a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 5px;
+
+}
+
+
+/* Header styles */
+h1{
+    font-size: 50px;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-shadow: 0 0 30px #ff0000;
+    margin: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Article styles */
+article {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 20px;
+    text-align: center;
+    font-size: 25px;
+    height: calc(100vh - 40px); /* Adjusts to fit within the viewport */
+    overflow: auto; /* Enables scrolling only if content overflows */
+}
+p{
+    /* Set the font size to 25px */
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* Set the grid column start to 2 and the grid row start to 1 */
+    grid-column-start: 2;
+    grid-row-start: 1;
+    /* Add margin and center the text */
+    margin: 20px;
+    text-align: center;
+}
+
+/* Navigation styles */
+nav{
+    /* Set the height to 100vh and hide the overflow */
+    overflow: hidden;
+    margin: 0;
+    /* Set the display to flex and flex direction to column */
+    display: flex;
+    text-decoration: none;
+    /* Set the grid column start to 1 and the grid column end to 3 */
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 100%;
+}
+
+/* Navigation list item and link styles */
+nav li, nav a {
+    /* Set the display to block and add margin and padding */
+    display: block;
+    margin: 10px 0;
+    padding: 10px 0;
+    text-decoration: none;
+    /* Remove the list style type and add a text shadow */
+    list-style-type: none;
+    list-style-image: none;
+    color: white;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: white 0px 0px 5px;
+    /* Add a cursor pointer */
+    cursor: pointer;
+}
+
+/*List styles*/
+.contentDiv ul{
+    list-style-type: none;
+}
+.contentDiv ul li{
+    list-style-type: none;
+    padding: 7px;
+}
+
+/* Light mode styles */
+.light {
+    /* Set the background color to white and the text color to black */
+    background-color: white;
+    color: black;
+    /* Set the header text color to black and add a text shadow */
+    h1{
+        color: black;
+        font-size: 50px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-shadow: #ff0000 0px 0px 30px;
+    }
+    /* Set the navigation list item and link styles */
+    nav li, nav a {
+        color: black;
+        display: block;
+        margin: 10px 0;
+        padding: 10px 0;
+        text-decoration: none;
+        list-style-type: none;
+        list-style-image: none;
+        font-size: 25px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-shadow: black 0px 0px 2px;
+    }
+}
+
+/* Light mode navigation styles */
+.light #announcingNav a {
+    color: #000;
+}
+
+.light #announcingNav li {
+    color: #000;
+}
+
+/* Switch button styles */
+#switchbtn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    font-size: 35px;
+    width: 50px;
+    height: 50px;
+}
