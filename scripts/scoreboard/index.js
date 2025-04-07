@@ -1,6 +1,7 @@
 window.onload = function () {
     let sport = document.getElementById("sport");
     let gameList = document.getElementById("games-list");
+    let signupBtn = document.getElementById("sign-in");
     let sportsList = document.getElementById("nav-list");
     let newsList = document.getElementById("news-list");
     let standingsList = document.getElementById("standings-list");
@@ -17,7 +18,8 @@ window.onload = function () {
     let today = document.getElementById('date');
     today.innerHTML = year + '-' + month + '-' + day;
     const listItems = document.querySelectorAll("li");
-    gameList.forEach( game => {
+    const gameslist = document.getElementsByClassName("game-li");
+    gameslist.forEach( game => {
         console.log("Clicked game with ID:", game.dataset.gameId);
         console.log("Clicked element:", this);
         }
