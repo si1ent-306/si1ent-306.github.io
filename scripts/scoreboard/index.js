@@ -18,12 +18,6 @@ window.onload = function () {
     let today = document.getElementById('date');
     today.innerHTML = year + '-' + month + '-' + day;
     const listItems = document.querySelectorAll("li");
-    const gameslist = document.getElementsByClassName("game-li");
-    gameslist.forEach( game => {
-        console.log("Clicked game with ID:", game.dataset.gameId);
-        console.log("Clicked element:", this);
-        }
-    )
     document.getElementById('back-to-projects').addEventListener('click', () => {
         location.href = 'https://si1ent-306.github.io/programming/personal-projects.html'
     })
