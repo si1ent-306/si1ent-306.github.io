@@ -109,9 +109,9 @@ window.onload = function () {
                         li.appendChild(eventName);
                         li.appendChild(homeImg)
                         gameList.appendChild(li);
-                        //FIX THIS
+                        ///TODO:FIX THIS
                         li.addEventListener('click', function() {
-                            window.location.href = `/scoreboard/game/${event.id}`;
+
                         });
                     })
                 })
