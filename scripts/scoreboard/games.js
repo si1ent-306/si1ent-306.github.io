@@ -11,7 +11,7 @@ window.onload = function () {
 
     // Fetch game data
     const options = {method: 'GET'};
-    fetch(`http://site.api.espn.com/apis/site/v2/sports/${currentSport}/scoreboard/${gameId}`, options)
+    fetch(`https://site.api.espn.com/apis/site/v2/sports/${currentSport}/scoreboard/${gameId}`, options)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
