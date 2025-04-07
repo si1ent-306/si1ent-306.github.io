@@ -7,6 +7,7 @@ const weatherForm = document.querySelector(".weatherForm");
 const cityInput = document.querySelector('.cityInput');
 const card = document.querySelector('.card');
 
+const apiKey = 'f63648645d31e18e90750d381665a9a3';
 
 weatherForm.addEventListener("submit", async event => {
     event.preventDefault();
@@ -25,7 +26,7 @@ weatherForm.addEventListener("submit", async event => {
 });
 
 async function getWeatherData(city){
-    const response = await fetch(`/weather/api?city=${city}`);
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`);
     console.log(response);
     if(!response.ok){
         throw new Error(`Could not fetch weather data: status code: ${response.status} ${response.statusText}`);
@@ -43,7 +44,6 @@ function displayWeatherInfo(data){
     const tempDisplay = document.createElement('p');
     const humidityDisplay = document.createElement('p');
     const descDisplay = document.createElement('p');
-    const weatherEmoji = document.createElement('p');
 
     cityDisplay.textContent = city;
     tempDisplay.textContent = `${(temp - 273.15).toFixed()}°C`;
