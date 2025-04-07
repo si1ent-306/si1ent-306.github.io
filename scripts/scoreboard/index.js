@@ -36,7 +36,9 @@ window.onload = function () {
 
     listItems.forEach((item) => {
         item.addEventListener("click", () => {
-            loadSport(item.textContent);
+            if(item.id !== "back-to-projects"){
+                loadSport(item.textContent);
+            }
         });
     });
 
